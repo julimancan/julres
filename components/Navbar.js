@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { AiFillGithub } from "react-icons/ai";
 import { colors } from "../siteColors";
 import mediaQueries from "../utils/mediaQueries.ts";
+import menuItems from "./menuItems";
 import SocialLinks from "./SocialLinks";
 
 
@@ -37,23 +38,23 @@ const Navbar = () => {
   return (
     <NavbarWrapper>
       <ul>
-        <li>
-          <Link href="/">
-            <a><h4>Home</h4></a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/about">
-            <a><h4>About me</h4></a>
-          </Link>
-        </li>
-        <li>
-          <a href="/JulianBustosWebDevResume.pdf" download>Download Resume</a>
-
-        </li>
-        <li>
-          <SocialLinks/>
-        </li>
+      {menuItems.map((item, index) => (
+          <li key={index} index={index}>
+            {item.name === "Download My Resume" ? (
+              <a href={item.name} download />
+            ) : item.name === "social links" ? (
+              <SocialLinks/>
+            ) : (
+            <Link href={item.url}>
+              <a>
+                <h4>
+                  {item.name}
+                </h4>
+              </a>
+            </Link>
+            )}
+          </li>
+        ))}
       </ul>
     </NavbarWrapper>
   )
