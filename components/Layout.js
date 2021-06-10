@@ -67,7 +67,6 @@ const Layout = ({ children, windowHeight }) => {
       <Header device={device} />
       <TopScrollBar scrollYProgress={scrollPercentage} />
       {children}
-      <Index />
 
     </LayoutWrapper>
   )

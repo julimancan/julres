@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { hardSkills } from "../content/content";
 import { DesktopList } from "./components";
-import { ToolTip } from "./ToolTip";
 
 
 const HardSkillWrapper = styled.article``;
@@ -16,12 +15,12 @@ const HardSkills = ({ device }) => {
       <DesktopList device={device}>
         {hardSkills.map((skill, index) => (
           <li key={index}>
-            <ToolTip text={skill.name}>
+            {/* <ToolTip text={skill.name}> */}
               <div>
                 {skill.icon}
                 <p>{skill.name}</p>
               </div>
-            </ToolTip>
+            {/* </ToolTip> */}
           </li>
         ))}
       </DesktopList>
