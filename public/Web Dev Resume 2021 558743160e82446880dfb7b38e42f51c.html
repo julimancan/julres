@@ -1,0 +1,892 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Web Dev Resume 2021</title>
+        <style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+        </style>
+    </head>
+    <body>
+        <article id="55874316-0e82-4468-80df-b7b38e42f51c" class="page sans">
+            <header>
+                <h1 class="page-title">Web Dev Resume 2021</h1>
+            </header>
+            <div class="page-body">
+                <h1 id="610b869b-a558-4b07-9a81-56a3bcb52403" class="">
+                    <strong>JULIAN BUSTOS</strong>
+                </h1>
+                <h2 id="c21df86f-614d-4910-bf38-1c01e47a63c1" class="">Full Stack Web Developer | Entrepreneur</h2>
+                <p id="cdf83fb8-80b6-4c71-849a-fec86939779b" class="">email:
+                    <a href="mailto:julian.m.bustos@gmail.com">julian.m.bustos@gmail.com</a>
+                </p>
+                <p id="41bf1980-01d7-4463-8c39-fb4e85270187" class="">website:
+                    <a href="http://www.eljunto.com/">eljunto.com</a>
+                </p>
+                <p id="2c6e5aba-58fe-4a19-9782-5a6dfd82b958" class="">phone: 647-783-6967</p>
+                <p id="baedef61-6161-48b5-9f43-ab12bbc93137" class="">LinkedIn:
+                    <a href="https://www.linkedin.com/in/julian-m-bustos/">https://www.linkedin.com/in/julian-m-bustos/</a>
+                </p>
+                <p id="2577e0cf-f5e2-4b9d-9213-03e3e7c07d8f" class="">GitHub: github.com/julimancan</p>
+                <h2 id="8e1dcf16-64ed-4131-be2d-f53d27bd6931" class="">OBJECTIVE</h2>
+                <p id="f3e0e254-63d2-4375-8f2c-ffb49987073d" class="">Web Developer with 5+ years of experience in entrepreneurship, consulting, and media production in Toronto with a knack for creating new solutions in a short period of time.</p>
+                <p id="7d2b6968-043b-4d25-84bb-355b9306eedb" class="">Fun, energetic, fast learner who knows that honesty, team, and hard work are the most important elements for any project. Passionate about technology, the internet, languages and acquiring new knowledge and skills.</p>
+                <p id="54c187a5-d636-4e59-a555-4327897cb4cd" class="">Currently leading a small team of developers to build a full-stack e-commerce site with a user-designed label on React and taking an IoT Masterclass that includes a Full-Stack application and the connection to IoT devices. Also actively learning Next.js, Nuxt.js, Vue.js, Docker, and much more!</p>
+                <p id="ecf17e9e-ab9c-47da-81e9-0ac9420bab5b" class="">Whenever I&#x27;m not coding, I&#x27;m either cuddling my foster dog, out creating content with my musician partner or playing soccer (currently out due to a minor injury!).</p>
+                <h2 id="6854c729-9a10-493f-a05f-4762d6a9fe7b" class="">HARD
+                    <strong>SKILLS</strong>
+                </h2>
+                <p id="7d49f93f-f933-4caa-9af8-29d0e523532e" class="">Git, Vue, Nuxt, Next, Express, Sass, React, Bootstrap, WordPress, Node.js, Microsoft Office, Auth0, Antd, Material UI, Styled Components, Emotion, Postman, MongoDB, Figma.</p>
+                <p id="baaafd62-abdc-4990-8f14-8bbc062c0701" class="">
+                    <strong>Programming Languages:</strong> CSS, HTML5, Javascript, JQuery, SQL, Ruby,
+                </p>
+                <p id="45af2cc2-b6d2-4262-b513-40889680c061" class="">
+                    <strong>LANGUAGES:</strong> Bilingual in English and Spanish. Intermediate French and limited working proficiency of German.
+                </p>
+                <h2 id="b5b1aabb-95f3-4aa2-9276-3b6a713753b5" class="">
+                    <strong>SOFT SKILLS</strong>
+                </h2>
+                <ul id="f4e55f4d-a5a7-42a5-9b8e-1fe9722a6ed9" class="bulleted-list">
+                    <li>Leadership, communication, teamwork, critical thinking, problem-solving, decision-making, adaptability, conflict management, resourcefulness, creativity, enthusiasm,  work ethic,  time management, stress management, empathy, social and interpersonal skills, project design, multitasking.</li>
+                </ul>
+                <h2 id="56462f2b-ef23-4073-be13-77e2e786ca23" class="">
+                    <strong>PROJECTS</strong>
+                </h2>
+                <blockquote id="376410f2-ff2b-455a-9b03-cce5cbfa55fb" class="">
+                    <strong>Name:</strong>It’s My Wine
+                    <strong>Dates:</strong> Sep.2020 (currently in progress)
+                </blockquote>
+                <ul id="ce43560f-f750-4fff-bf2c-b12f72297b4a" class="bulleted-list">
+                    <li>Leading a team of 3 developers in the building and implementation of an e-commerce site with a label customizer aimed at creating logic and solutions in line with our client&#x27;s goals, vision, and ethics.</li>
+                </ul>
+                <ul id="4bde7d04-a779-4714-b367-2fa18067591a" class="bulleted-list">
+                    <li>Designing the wireframe, peer programming the front-end of a Full Stack Application (built using React, Konva, Stripe, and emailjs), developing over 10 new features and implementing automatic emails.</li>
+                </ul>
+                <p id="00432c60-5711-413b-bacf-b98db90ed83a" class="">
+                    <strong>Stack:</strong>React, Bulma, Konva, SASS, Express, Stripe.
+                </p>
+                <p id="e7731371-9815-4126-8cc8-34238c8dc1b2" class="">
+                    <strong>Link:</strong>
+                    <a href="https://itsmywine.netlify.app/">https://itsmywine.netlify.app/</a>
+                </p>
+                <p id="7fd933d4-04d9-4a7f-a7a6-7466dae0766b" class="">
+                    <strong>Front End Github:</strong>
+                    <a href="https://github.com/maple-tree-js/winery-fe">https://github.com/maple-tree-js/winery-fe</a>
+                </p>
+                <p id="dd6d4534-c7c4-461c-a210-fc3d50b43537" class="">
+                    <strong>Back End Github:</strong>
+                    <a href="https://github.com/maple-tree-js/winery-fe">https://github.com/maple-tree-js/winery-</a>be
+                </p>
+                <p id="cf4ac97a-c5a8-43fd-9747-98175f2ae14e" class="">
+                    <strong>ImageLink:</strong>
+                </p>
+                <blockquote id="cd318109-b3c0-4cf3-931e-41204ed95d37" class="">
+                    <strong>Name:</strong>IoT MasterClass
+                    <strong>Dates:</strong> April 2021 – (currently in progress)
+                </blockquote>
+                <ul id="f4c1601f-a999-4676-94c2-61d4b6eda7a7" class="bulleted-list">
+                    <li>Building a Full Stack Application platform to connect custom IoT devices to customer&#x27;s devices where they choose from a list of premade templates that display and manage the information.</li>
+                </ul>
+                <ul id="9acb9d4f-57de-467c-a4b7-e98153d52c08" class="bulleted-list">
+                    <li>Developing the app with Vue, Nuxt, Express for the backend, and MongoDB as a database.</li>
+                </ul>
+                <p id="2667391a-fe81-46a3-9e60-ef90f2fec7f1" class="">
+                    <strong>Stack:</strong>Express, Docker, MongoDB, Vue, Nuxt, Bootstrap, JWT, Element UI, MQTT, AWS (EC2 server).
+                </p>
+                <p id="e222eaa8-d9a6-458d-a17e-bf24a68f655e" class="">
+                    <strong>Github:</strong>
+                    <a href="https://github.com/julimancan/iot-masterclass-fe">https://github.com/julimancan/iot-masterclass-fe</a>
+                </p>
+                <p id="5cd006ef-7567-4ce9-8e17-ec2d52a1c3bb" class="">
+                    <strong>ImageLink:</strong>
+                </p>
+                <blockquote id="de704703-1188-4b71-b2de-5287fe657ad0" class="">
+                    <strong>Name:</strong>ReForest
+                    <strong>Dates:</strong>Aug. 2020 to Aug. 2020
+                </blockquote>
+                <ul id="5065d847-16a9-4034-b90b-4b11b7b13dd3" class="bulleted-list">
+                    <li>Worked with 3 developers as part of our graduation project for Lighthouse Labs Web Development bootcamp, to build an ecologically friendly web app for waste management.</li>
+                </ul>
+                <ul id="b0e6223a-9913-406e-80e0-83f429be852d" class="bulleted-list">
+                    <li>The app uses AWS Rekognition service to identify waste with photographs. The project was built using React, Auth0 &amp; PostgreSQL on the backend.</li>
+                </ul>
+                <ul id="70b6bea3-a5ce-46f6-a2b3-717c1141ed18" class="bulleted-list">
+                    <li>Engineered and developed the front-end features, design, and implementation of the database, which includes a gamified version to engage users by providing a space to compare their progress to their circle of friends.</li>
+                </ul>
+                <p id="425d2fc1-b32d-4f10-8d9f-513ac82a4f04" class="">
+                    <strong>Stack:</strong>React, Bulma, Konva, SASS, Express, Stripe, PostgreSQL, Auth0, Styled-Components.
+                </p>
+                <p id="fb4e9754-5f1e-4f01-8d58-c39812194072" class="">
+                    <strong>Github:</strong>
+                    <a href="https://github.com/lib3rate/which-bin-app">https://github.com/lib3rate/which-bin-app</a>
+                </p>
+                <p id="4f553a75-bb00-42dc-aec9-b696ce946241" class="">
+                    <strong>ImageLink:</strong>
+                    <a href="https://github.com/lib3rate/which-bin-app/raw/master/public/images/ReadME/Euni.gif">https://github.com/lib3rate/which-bin-app/raw/master/public/images/ReadME/Euni.gif</a>
+                </p>
+                <h2 id="73818af5-1ded-4400-a905-6f7dc7a43c9a" class="">
+                    <strong>EDUCATION</strong>
+                </h2>
+                <p id="dadd31ce-9815-4452-abad-69c1da8c1132" class="">
+                    <strong>Institution:</strong> Lighthouse Labs
+                    <strong>Dates:</strong>Mar. 2020 to Aug. 2020
+                </p>
+                <p id="a91b4960-878e-4fcc-a484-eaad3c996267" class="">
+                    <strong>Title:</strong>Full Stack Web Development Bootcamp
+                </p>
+                <p id="92f46ca6-59f9-4955-a273-cf062a6cbacc" class="">
+                    <strong>Institution:</strong>Universidad de la Camara de Comercio de Bogota
+                    <strong>Dates:</strong>Oct. 2009 to Dec. 2009
+                </p>
+                <p id="bd38d85b-1b30-408f-98a4-a4b48c2157b0" class="">
+                    <strong>Title:</strong>Certificate Marketing
+                </p>
+                <p id="5cb93245-4d4c-44c2-923f-b5c52143dc72" class="">
+                    <strong>Institution:</strong>Universidad de la Camara de Comercio de Bogota
+                    <strong>Dates:</strong>Nov. 2006 to Nov. 2009
+                </p>
+                <p id="2c14787d-6238-45e9-95b3-99ae3434cf67" class="">
+                    <strong>Title:</strong>Bachelor’s degree Business Administration
+                </p>
+                <h2 id="8c91f283-d149-4ab5-a262-223fff720ded" class="">Professional Experience</h2>
+                <p id="97b9aff6-96bb-4dd7-b8a0-32ca5781a2d9" class="">
+                    <strong>Company:</strong>El Junto
+                    <strong>Location:</strong>Toronto
+                </p>
+                <p id="a43df05e-d267-484a-a553-4d2b29f5ce44" class="">
+                    <strong>Position:</strong>Manager, Web Development, Technology Research, Technical Support, Photographer, Camera Operator, and Business Consultation.
+                </p>
+                <p id="47e97c4b-d8c0-40c1-b055-0f1b2813101e" class="">
+                    <strong>Dates:</strong>Dec. 2016 to Current, Dec. 2016 to Current.
+                </p>
+                <p id="1f4b0554-7526-49bd-a567-1afa9c9e3dcc" class="">
+                    <strong>Achievements:</strong>
+                </p>
+                <ul id="e8771db3-f301-4c7c-b01f-3ed5fb2a50ca" class="bulleted-list">
+                    <li>Designing and implementing websites for Carole&#x27;s Cheesecakes, The Empanada Dealer, Sorrisa group (2017 - 2019), Heavenfull (2017-2019), It&#x27;s My Wine, and Eunice Keitan (implementation of designer wireframe)</li>
+                </ul>
+                <ul id="c8d64cb5-29a5-4696-89d5-0f809e92e8ea" class="bulleted-list">
+                    <li>Developing new business strategies to create new revenue streams, including bringing onboard new customers for Food and Wedding Photography, which resulted in the growth of the Photography Business by more than 60% in 2019.</li>
+                </ul>
+                <ul id="409e6cb5-3b16-4476-877c-2655a27c981e" class="bulleted-list">
+                    <li>Successfully meeting and exceeding client expectations while navigating the time and pressure demands of weddings (e.g. dealing with extended schedules and limited breaks) by focusing our efforts on achieving high-quality content for our customers through seizing opportunities as they arise.</li>
+                </ul>
+                <ul id="e6625d72-82be-4820-a2cf-4c91fc63c8c4" class="bulleted-list">
+                    <li>Developing and implementing social media marketing strategies, including assisting in media production (photography, video camera operation, sound assistance, and general technology expertise) for the marketing of artist  Eunice Keitan, which resulted in an increase of followers from 700 to 1600 in 2020.</li>
+                </ul>
+                <ul id="bf451ac5-c6a8-4f2c-9cf8-b7775fc77764" class="bulleted-list">
+                    <li>Conducting the budgeting, bookkeeping and general account management of the company and analyzing data and competitive intelligence to determine and execute new market approaches.</li>
+                </ul>
+                <p id="40835771-45e7-417a-ba47-c92015228e55" class=""></p>
+                <p id="c85229f9-f133-4974-85e9-68a1a56e1a0e" class="">
+                    <strong>Company:</strong>The Empanada Dealer
+                    <strong>Location:</strong>Toronto
+                </p>
+                <p id="154e0c45-ad7e-49b2-ba18-0fc6d88916f5" class="">
+                    <strong>Position:</strong>Owner - General Manager
+                </p>
+                <p id="c243a683-f667-4ee3-9b9c-a6056266ae8c" class="">
+                    <strong>Dates:</strong>Spring 2012 to Mar. 2020
+                </p>
+                <p id="4da2c18a-4923-4677-96f7-c3ceda0d73a9" class="">
+                    <strong>Achievements:</strong>
+                </p>
+                <ul id="d9dc61e8-58d8-4961-8468-96671e3f7cca" class="bulleted-list">
+                    <li>Found new marketing strategies and managed business-to-business sales and relations. Increasing sales by more than 30% from 2019 to 2020.</li>
+                </ul>
+                <ul id="58d14f70-de8a-4577-9404-50fc9780c9ae" class="bulleted-list">
+                    <li>Supervised a team of 5 for the safe handling of food in the production of 1000 weekly empanadas.</li>
+                </ul>
+                <ul id="d8e941f5-671b-4370-842f-c4b58165f55c" class="bulleted-list">
+                    <li>Improved office efficiency by creating streamlining accounting methodologies, and correctly managing our client base.</li>
+                </ul>
+                <p id="46e7af5a-823a-4e3f-9f6e-f2b185eb80f7" class=""></p>
+                <p id="8f1d4e42-6ec0-48b6-8934-38dd05adcb71" class="">
+                    <strong>Company:</strong>Social Dance Spot
+                    <strong>Location:</strong>Toronto
+                </p>
+                <p id="b9dbed01-4ed3-4056-ac6e-d5cc18657efa" class="">
+                    <strong>Position:</strong>General Manager
+                </p>
+                <p id="c05fdd4c-e0d5-42b2-a9d7-aed206fa142a" class="">
+                    <strong>Dates:</strong>Spring 2013 to Spring 2015
+                </p>
+                <p id="c00fe0b4-d2e3-4999-9a00-492ca1b3d314" class="">
+                    <strong>Achievements:</strong>
+                </p>
+                <ul id="44501e31-787f-4839-b09d-88662c9c550a" class="bulleted-list">
+                    <li>Managed a team of 5 dance instructors while providing customer support and supervising customers&#x27; flow from first contact to maintain customers&#x27; continued engagement.</li>
+                </ul>
+                <ul id="d253a09a-252b-405c-a32d-a8dba3588bf5" class="bulleted-list">
+                    <li>Managed and maintained WordPress website and online social media to increase brand awareness in Toronto by developing new marketing strategies.</li>
+                </ul>
+                <ul id="7cb3a71e-2170-44e2-a957-6b121cee35df" class="bulleted-list">
+                    <li>Conducted the budgeting and bookkeeping of the studio, managing incoming payments from customers and outgoing payments to suppliers.</li>
+                </ul>
+                <ul id="64504e82-2e29-4eb1-8482-9cfa9c3a4d96" class="bulleted-list">
+                    <li>Maintained a clean and respectful atmosphere where more than 100 students would feel safe and comfortable to learn to dance.</li>
+                </ul>
+                <ul id="e55fbfa3-bfbc-40fa-8c7e-829278adbd8a" class="bulleted-list">
+                    <li>Organized and managed weekly dance events.</li>
+                </ul>
+                <p id="d143d196-d2eb-4a24-a7d1-2c6f1bae7bd5" class=""></p>
+                <p id="90cf1717-2c01-4be5-92e9-ca384ed56a8d" class=""></p>
+                <p id="11225d47-8077-4b3a-964f-e84f9714aa54" class=""></p>
+                <blockquote id="8a9011b6-d530-45a3-a1a7-f690635f82c7" class="">
+                    <strong>Name:</strong>Plan-It
+                    <strong>Dates:</strong>June 2020 to June 2020
+                </blockquote>
+                <blockquote id="a658e884-edb8-4440-995d-9ee8e4fb6659" class="">Plan·It is a clone of Doodle which is used for scheduling events within a group. This was created for a group midterm project as part of our learnings at Lighthouse Labs.</blockquote>
+                <blockquote id="f4282d19-328a-4d4b-8e43-d880783943b1" class="">
+                    <strong>Name:</strong>Jungle-Rails
+                    <strong>Dates:</strong>July 2020 to July 2020
+                </blockquote>
+                <blockquote id="c0b3b077-3d01-49f0-a384-f5289f3e418b" class="">A mini e-commerce application built with Rails 4.2. Visitors of the site can see all products, view individual product details and add them to a cart. User is then able to view the contents of the cart before checking out through the Stripe Payment API.</blockquote>
+                <blockquote id="bac6ec48-a2ea-48e3-a127-7b88e508c1d7" class="">
+                    <strong>Name:</strong>Tweeter-Clone
+                    <strong>Dates:</strong>June 2020 to June 2020
+                </blockquote>
+                <blockquote id="4dc512b8-ac79-4720-88b4-72b11baf21c3" class="">HTML, CSS, JS, jQuery and AJAX , and Node, Express and MongoDB back-end .</blockquote>
+                <blockquote id="a90bdd22-d37c-4c84-a34a-495dbbcdd4c5" class="">
+                    <strong>Name:</strong>Scheduler
+                    <strong>Dates:</strong> July 2020 to July 2020
+                </blockquote>
+                <blockquote id="8f59d32b-e43f-49ee-93ce-2a69d59aa27f" class="">Scheduler is a full stack web application built with React, it allows users to book, edit, or cancel interviews.</blockquote>
+                <blockquote id="e70f6b41-1c76-4a4b-b005-6413021f7665" class="">
+                    <strong>Name:</strong>TinyApp
+                    <strong>Dates:</strong>May 2020 to May 2020
+                </blockquote>
+                <blockquote id="db4b9a74-d665-4c85-a4a3-ac885a9eea9b" class="">TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs (à la bit.ly).</blockquote>
+                <blockquote id="923a50e5-92ea-45db-92fd-b427c4c0df58" class="">
+                    <strong>Name:</strong>Movie Nominations
+                    <strong>Dates:</strong>Aug. 2020 to Aug. 2020
+                </blockquote>
+                <blockquote id="ecf5b528-a2a4-44ae-9468-10dbd1c6ff00" class="">App built with React, Auth0, Express &amp; PostgreSQL that makes a search to the OMDB API, and where you can nominate a song to the movie nominees, every nominee has only 5 votes.</blockquote>
+                <p id="46ff7bd2-a28c-4d5d-aa48-e06a89358998" class=""></p>
+            </div>
+        </article>
+    </body>
+</html>
