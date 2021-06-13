@@ -2,7 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scrollbar-width: none;  /* Firefox */
 }
 ::-webkit-scrollbar {
   display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
 }

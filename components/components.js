@@ -7,7 +7,7 @@ export const DesktopList = styled("ul")`
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 2rem;
-   background: red;
+   /* background: red; */
   width: 100%;
 
   li {

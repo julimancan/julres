@@ -9,7 +9,7 @@ import mediaQueries from '../utils/mediaQueries.ts';
 const transitionDuration = ".4s";
 
 const BurgerContainer = styled.div`
-  top: 4rem;
+  top: 2rem;
   right: 2rem;
   position: fixed;
   color: white;
@@ -98,7 +98,7 @@ const NavigationItem = styled.li`
     font-weight: bold;
     margin: 0.3rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   a {
     text-transform: uppercase;
@@ -125,16 +125,16 @@ const NavigationItem = styled.li`
 const BurgerMenu = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <NavContainer open={navOpen}>
-      <BurgerContainer open={navOpen} >
-        <Burger open={navOpen} onClick={() => setNavOpen(!navOpen)} />
+    <NavContainer  open={navOpen}>
+      <BurgerContainer onClick={() => setNavOpen(!navOpen)} open={navOpen} >
+        <Burger open={navOpen}  />
       </BurgerContainer>
 
       <NavigationList open={navOpen}>
         {menuItems.map((item, index) => (
           <NavigationItem key={index} open={navOpen} index={index}>
             {item.name === "Download My Resume" ? (
-              <a href={item.name} download />
+              <a href={item.name} download><h3>{item.name}</h3></a>
             ) : item.name === "social links" ? (
               <SocialLinks/>
             ) : (

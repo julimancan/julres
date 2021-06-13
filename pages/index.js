@@ -1,20 +1,21 @@
 import HardSkills from '../components/HardSkills';
 import ProgrammingLanguages from '../components/ProgrammingLanguages';
-import { useIntersection, useMeasure, useWindowScroll, useWindowSize } from "react-use";
+import { useWindowScroll, useWindowSize } from "react-use";
 import styled from '@emotion/styled';
-import { useEffect, useRef, useState } from 'react';
-import { motion, motionValue, useMotionValue, useViewportScroll } from 'framer-motion';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { routeAnimation, variants, bounceTransition } from '../animations';
 import Projects from '../components/Projects';
 import { deviceUsed } from '../utils/getDevice';
 import mediaQueries from '../utils/mediaQueries.ts';
 
-// import { useInView } from 'react-intersection-observer';
 
 const HomePage = styled(motion.main)`
   
-
+  * {
+    /* border: 1px solid black; */
+  }
   article {
     margin: 1rem 0 0;
     /* background: yellow; */
@@ -28,7 +29,8 @@ const HomePage = styled(motion.main)`
 
 
 const LandingPage = styled.section`
-  height: 80vh;
+  height: 50vh;
+  margin-top: 10rem;
   width: 100%;
   /* background: red; */
   display: grid;
@@ -62,13 +64,7 @@ export default function Home() {
   //scroll position:
   const { y } = useWindowScroll();
 
-  const [projectsHeight, setProjectsHeight] = useState(0)
-
-  useEffect(() => {
-    const height = document.getElementById("projects").clientHeight;
-    setProjectsHeight(height);
-    console.log(`projectsHeight`, projectsHeight)
-  },[])
+  
   return (
     <HomePage
       variants={routeAnimation}
@@ -127,7 +123,6 @@ export default function Home() {
         >
           <h2>I am a full-stack web developer</h2>
           <p>I have been building React Aps for a long time if you consider a year to be a long time 😊</p>
-          {/* {intersection.intersectionRatio && intersection.intersectionRatio} */}
         </motion.div>
         <motion.div
           initial="hidden"
@@ -135,28 +130,42 @@ export default function Home() {
           variants={variants}
         >
           <p>However in this short amount of time I've been able to be part of some very cool projects and collaborate with some awesome devs</p>
-          {/* {intersection.intersectionRatio && intersection.intersectionRatio} */}
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          animate={`${y > 150 && "visible"}`}
+          variants={variants}
+        >
+          <p>I have experience in a few programming languages:</p>
         </motion.div>
       {/* {y} */}
       </LandingPage>
+
+
       <motion.article
         initial="hidden"
-        animate={`${y > 175 && "visible"}`}
+        animate={`${y > 200 && "visible"}`}
         variants={variants}
         id="projects"
       >
            <ProgrammingLanguages
-          device={device}
         />
       </motion.article>
       {/* <HardSkills device={device}/> */}
-
+            
       <motion.article
         initial="hidden"
-        animate={`${y > 210 && "visible"}`}
+        animate={`${y > 250 && "visible"}`}
         // animate={`${device === "desktop" ? y > 400 && "visible" : device === "tablet" ? y > 630 && "visible" : y > 200 && "visible" }`}
         variants={variants}
       >
+            <motion.div
+          initial="hidden"
+          animate={`${"visible"}`}
+          variants={variants}
+        >
+          <p>And here you can checkout some of my favourite projects:</p>
+        </motion.div>
            <Projects device={device}/>
 
       </motion.article>

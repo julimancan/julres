@@ -6,7 +6,7 @@ export const colors = {
   menuBackgroundColor: "#542966",
   menuBarColor: "white",
   menuTextColor: "white",
-  projectCardBackground: "lightgrey",
-  projectCardTitle: "#31183C",
+  projectCardBackground: "#6B3482",
+  projectCardTitle: "white",
   
 }

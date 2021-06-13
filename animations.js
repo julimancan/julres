@@ -60,3 +60,22 @@ export const pageVariants = {
     opacity: 0
   }
 }
+
+export const programmingContVariants = {
+  hidden: { opacity: 0, backgroundColor: "", y: 100 },
+  show: {
+    opacity: 1,
+    // backgroundColor: "blue",
+    transition: {
+      staggerChildren: 3.5,
+      duration: 1
+    },
+    y: 0
+  },
+
+}
+
+export const progLangVariants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 }
+}

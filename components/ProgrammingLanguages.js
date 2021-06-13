@@ -3,45 +3,64 @@ import { DesktopList } from "./components";
 import ToolTip from "./ToolTip";
 import styled from "@emotion/styled";
 import mediaQueries from "../utils/mediaQueries.ts";
+import { progLangVariants, programmingContVariants } from "../animations";
+import { motion } from "framer-motion";
 const ProgrammingList = styled.section`
-  display: none;
+  /* display: none; */
   /* background: red; */
   width: 100%;
+  * {
+    /* border: 1px solid black; */
+  }
   h2 {
     margin-bottom: 1rem;
   }
   ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     /* margin-top: 1rem; */
     gap: 2.5rem;
     width: 100%;
-    li {
-      font-size: 1rem;
-      /* border: 1px solid black; */
-      div {
-        display: flex;
-        align-items: center;
+    .prog-lang {
+      display: flex;
   
-        p {
-          display: block;
-            font-size: 1.5rem;
-            white-space: nowrap;
-            margin-left: 1ch;
-        }
+      .prog-lang-mov {
+        display: flex;
+          font-size: 1.5rem;
+          width: 100%;
+          p {
+          white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              margin-left: .5rem;
+            }
+          }
+
       }
     }
   }
-  ${mediaQueries.desktop_up`
+  ${mediaQueries.tablet_up`
     display: grid;
     ul {
       grid-template-columns: repeat(3, 1fr);
       .prog-lang {
         font-size: 3rem;
-        div {
+        .prog-lang-mov {
+          display: inline-block;
+        }
+      }
+    }
+  `}
+  ${mediaQueries.desktop_up`
+    ul {
+      .prog-lang {
+        .prog-lang-mov {
+          font-size: 4rem;
           p {
-            display: none
+          display: none;
           }
         }
       }
@@ -49,24 +68,33 @@ const ProgrammingList = styled.section`
   `}
 `;
 
-const ProgrammingLanguages = ({ device }) => {
+const ProgrammingLanguages = () => {
   return (
     <ProgrammingList>
-      <h2>Programming Languages</h2>
-      <ul device={device}>
+      {/* <h2>Programming Languages</h2> */}
+      <ul>
         {programmingLanguages.map((language, index) => (
           <ToolTip
             content={language.name}
             key={index}
           >
-            <li className="prog-lang"
+            <motion.div className="prog-lang"
+              variants={programmingContVariants}
+              initial="hidden"
+              animate="show"
             >
-              <div >
+              <motion.div
+              className="prog-lang-mov"
+                variants={progLangVariants}
+              >
+                <p>
+                 {language.name}
                 {language.icon}
-                <p>{language.name}</p>
-              </div>
-            </li>
+                </p>
+              </motion.div>
+            </motion.div>
           </ToolTip>
+          
         ))}
       </ul>
     </ProgrammingList>

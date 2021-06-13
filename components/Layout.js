@@ -21,7 +21,7 @@ const LayoutWrapper = styled.div`
     align-items: center;
     justify-content: center;
     color: ${colors.textColor};
-    padding: 3rem 11ch 3rem;
+    padding: 3rem 4ch 3rem;
     opacity: 1;
     * {
     /* border: 1px solid black; */
@@ -31,7 +31,7 @@ const LayoutWrapper = styled.div`
       white-space: nowrap;
     }
     ${mediaQueries.phablet_up`
-      padding: 0 18ch 3rem;
+      padding: 0 6ch 3rem;
       h1 {
         font-size: 2rem
       }
