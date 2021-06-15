@@ -1,12 +1,14 @@
 export const colors = {
-  background: "#31183C",
+  // background: "#31183C",
+  background: "black",
   textColor: "white",
   textHoverColor: "#eabffa",
-  toolTipBackgroundColor: "#542966",
-  menuBackgroundColor: "#542966",
+  // toolTipBackgroundColor: "#542966",
+  toolTipBackgroundColor: "#4F4B4A",
+  menuBackgroundColor: "#4E4E4E",
   menuBarColor: "white",
   menuTextColor: "white",
-  projectCardBackground: "#6B3482",
+  projectCardBackground: "#4E4E4E",
   projectCardTitle: "white",
   
 }

@@ -37,7 +37,7 @@ const Header = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Play&family=Russo+One&display=swap" rel="stylesheet" />
       </Head>
-      <DevLogo >{hash} </DevLogo>
+      {/* <DevLogo >{hash} </DevLogo> */}
       <BurgerMenu />
       <Navbar />
     </div>
