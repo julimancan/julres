@@ -54,12 +54,16 @@ const ProjectModalContainer = styled.section`
     ul {
       align-self: flex-start;
       list-style: none;
+      margin-bottom: .5rem;
       li {
         a {
           /* word-wrap: none; */
           /* color: red; */
         }
       }
+    }
+    .stack {
+      columns: 2;      
     }
   }
   ${mediaQueries.desktop_medium_up`
@@ -100,7 +104,7 @@ const ProjectModal = ({ setModalOpen, modalInfo }) => {
             </a>
           )}
           {modalInfo.githubLinks.length > 0 && (
-            <ul>
+            <ul >
               <h3>GitHub Link{modalInfo.githubLinks.length === 1 ? "" : "s"}:</h3>
               {modalInfo.githubLinks.map((item, index) => (
                 <li>
@@ -113,6 +117,13 @@ const ProjectModal = ({ setModalOpen, modalInfo }) => {
 
             </ul>
           )}
+          <h3>This project was built with the following stack:</h3>
+          <ul className="stack">
+
+            {modalInfo.stack.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </ProjectModalContainer>
