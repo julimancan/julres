@@ -14,6 +14,7 @@ const NavbarWrapper = styled.nav`
   z-index: 100;
   bottom: 1rem;
   right: .5rem;
+  font-family: 'Russo One', sans-serif;
   ul {
     list-style: none;
     li {

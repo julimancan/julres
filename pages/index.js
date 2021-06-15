@@ -2,13 +2,14 @@ import HardSkills from '../components/HardSkills';
 import ProgrammingLanguages from '../components/ProgrammingLanguages';
 import { useWindowScroll, useWindowSize } from "react-use";
 import styled from '@emotion/styled';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { routeAnimation, variants, bounceTransition } from '../animations';
 import Projects from '../components/Projects';
 import { deviceUsed } from '../utils/getDevice';
 import mediaQueries from '../utils/mediaQueries.ts';
+import ProjectModal from '../components/ProjectModal';
 
 
 const HomePage = styled(motion.main)`
@@ -17,8 +18,8 @@ const HomePage = styled(motion.main)`
     /* border: 1px solid black; */
   }
   article {
-    margin: 1rem 0 0;
-    /* background: yellow; */
+    margin: 1rem 0 2rem;
+    /* background: black; */
     width: 100%;
   }
   ${mediaQueries.desktop_up`
@@ -34,7 +35,7 @@ const LandingPage = styled.section`
   width: 100%;
   /* background: red; */
   display: grid;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   /* padding: 0 3rem; */
   * {
@@ -64,7 +65,18 @@ export default function Home() {
   //scroll position:
   const { y } = useWindowScroll();
 
-  
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const [modalInfo, setModalInfo] = useState();
+
+  const openModal = (project) => {
+    setModalOpen(true);
+    setModalInfo(project);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalInfo();
+  };
   return (
     <HomePage
       variants={routeAnimation}
@@ -77,7 +89,7 @@ export default function Home() {
         // animate="visible"
       >
 
-        <motion.h1
+        <motion.h2
         initial="hidden"
         animate="visible"
 
@@ -85,7 +97,7 @@ export default function Home() {
           
         >
           Hola! I'm Julian Bustos
-        </motion.h1>
+        </motion.h2>
         <motion.div
           initial="hidden"
           animate={`${"visibleInstructions"}`}
@@ -93,7 +105,8 @@ export default function Home() {
           variants={variants}
 
         >
-          <span>scroll slowly
+          <span>
+          {/* scroll slowly */}
           <BouncyArrow
               transition={bounceTransition}
               animate={{
@@ -122,15 +135,15 @@ export default function Home() {
           variants={variants}
         >
           <h2>I am a full-stack web developer</h2>
-          <p>I have been building React Aps for a long time if you consider a year to be a long time 😊</p>
+          {/* <p>I have been building React Aps for a long time if you consider a year to be a long time 😊</p> */}
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           animate={`${y > 100 && "visible"}`}
           variants={variants}
         >
           <p>However in this short amount of time I've been able to be part of some very cool projects and collaborate with some awesome devs</p>
-        </motion.div>
+        </motion.div> */}
         <motion.div
           initial="hidden"
           animate={`${y > 150 && "visible"}`}
@@ -145,11 +158,11 @@ export default function Home() {
       <motion.article
         initial="hidden"
         animate={`${y > 200 && "visible"}`}
+        // animate="visible"
         variants={variants}
         id="projects"
       >
-           <ProgrammingLanguages
-        />
+           <ProgrammingLanguages/>
       </motion.article>
       {/* <HardSkills device={device}/> */}
             
@@ -166,11 +179,13 @@ export default function Home() {
         >
           <p>And here you can checkout some of my favourite projects:</p>
         </motion.div>
-           <Projects device={device}/>
+           <Projects device={device} openModal={openModal}/>
 
       </motion.article>
         
-
+        {modalOpen && (
+          <ProjectModal setModalOpen={closeModal} modalInfo={modalInfo}/>
+        )}
     </HomePage>
   )
 }

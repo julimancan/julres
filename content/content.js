@@ -113,10 +113,10 @@ export const programmingLanguages = [
     name: "SQL",
     icon: <AiOutlineConsoleSql />
   },
-  {
-    name: "Ruby",
-    icon: <SiRuby />
-  },
+  // {
+  //   name: "Ruby",
+  //   icon: <SiRuby />
+  // },
 
 ]
 
@@ -154,7 +154,7 @@ export const projects = [
     stack: [
       "Express", "Docker", "MongoDB", "Vue", "Nuxt", "Bootstrap", "JWT", "Element UI", "MQTT", "AWS (EC2 server)",
     ],
-    liveLink: "https://itsmywine.netlify.app/",
+    liveLink: "",
     githubLinks: [
       "https://github.com/julimancan/iot-masterclass-fe",
     ],
@@ -171,7 +171,7 @@ export const projects = [
     stack: [
       "React", "Bulma", "Konva", "SASS", "Express", "Stripe", "PostgreSQL", "Auth0", "Styled-Components",
     ],
-    liveLink: "https://itsmywine.netlify.app/",
+    liveLink: "",
     githubLinks: [
       "https://github.com/lib3rate/which-bin-app",
       "https://github.com/lib3rate/which-bin-api",
@@ -189,7 +189,7 @@ export const projects = [
     stack: [
       "React", "Bulma", "Konva", "SASS", "Express", "Stripe", "PostgreSQL", "Auth0", "Styled-Components",
     ],
-    liveLink: "https://itsmywine.netlify.app/",
+    liveLink: "",
     githubLinks: [
       "https://github.com/lib3rate/which-bin-app",
       "https://github.com/lib3rate/which-bin-api",

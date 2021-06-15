@@ -34,9 +34,11 @@ const Header = () => {
         <title>Julian Bustos</title>
         <meta name="description" content="Julian Bustos Portfolio" />
         <link rel="icon" href="/juli.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Play&family=Russo+One&display=swap" rel="stylesheet" />
       </Head>
       <DevLogo >{hash} </DevLogo>
-      <BurgerMenu/>
+      <BurgerMenu />
       <Navbar />
     </div>
   )

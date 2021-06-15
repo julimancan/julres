@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useState } from "react";
 import { bounceTransition } from "../animations";
 import { projects } from "../content/content";
 import { colors } from "../siteColors";
@@ -53,7 +54,13 @@ const ProjectWrapper = styled.section`
   `}
 `;
 
-const Projects = () => {
+
+
+
+const Projects = ({ openModal }) => {
+
+
+
   return (
     <ProjectWrapper>
       <h2>Featured Projects</h2>
@@ -75,7 +82,7 @@ const Projects = () => {
             direction="top"
             
          >
-            <li>
+            <li onClick={() => openModal(project)}>
               <h3>
                 {project.name}
               </h3>
@@ -91,6 +98,7 @@ const Projects = () => {
           </ToolTip>
         ))}
       </ul>
+   
     </ProjectWrapper>
   )
 };

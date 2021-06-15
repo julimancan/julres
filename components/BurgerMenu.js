@@ -92,6 +92,7 @@ const NavigationItem = styled.li`
   animation-delay: calc(${({ index }) => index === 0 ? 1 : index + 1} * 400ms);  
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
+  font-family: 'Russo One', sans-serif;
   h3, .download-res {
     color: ${colors.menuTextColor};
     text-transform: uppercase;

@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import mediaQueries from "../utils/mediaQueries.ts";
 import { progLangVariants, programmingContVariants } from "../animations";
 import { motion } from "framer-motion";
-const ProgrammingList = styled.section`
+const ProgrammingList = styled.div`
   /* display: none; */
   /* background: red; */
   width: 100%;
@@ -20,24 +20,24 @@ const ProgrammingList = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* margin-top: 1rem; */
+    /* background-color: red; */
     gap: 2.5rem;
     width: 100%;
     .prog-lang {
       display: flex;
-  
       .prog-lang-mov {
         display: flex;
           font-size: 1.5rem;
           width: 100%;
-          p {
+          .prog-name {
           white-space: nowrap;
             display: flex;
             align-items: center;
             justify-content: center;
-            svg {
-              margin-left: .5rem;
-            }
           }
+            svg {
+              margin-left: .8ch;
+            }
 
       }
     }
@@ -49,7 +49,7 @@ const ProgrammingList = styled.section`
       .prog-lang {
         font-size: 3rem;
         .prog-lang-mov {
-          display: inline-block;
+          /* display: inline-block; */
         }
       }
     }
@@ -59,7 +59,9 @@ const ProgrammingList = styled.section`
       .prog-lang {
         .prog-lang-mov {
           font-size: 4rem;
-          p {
+          display: flex;
+          justify-content: center;
+          .prog-name {
           display: none;
           }
         }
@@ -69,6 +71,7 @@ const ProgrammingList = styled.section`
 `;
 
 const ProgrammingLanguages = () => {
+  // console.log(`programmingLanguages`, programmingLanguages)
   return (
     <ProgrammingList>
       {/* <h2>Programming Languages</h2> */}
@@ -84,17 +87,19 @@ const ProgrammingLanguages = () => {
               animate="show"
             >
               <motion.div
-              className="prog-lang-mov"
+                className="prog-lang-mov"
                 variants={progLangVariants}
+                initial="hidden"
+                animate="show"
               >
-                <p>
-                 {language.name}
+                <div class="prog-name">
+                  {language.name}
+                </div>
                 {language.icon}
-                </p>
               </motion.div>
             </motion.div>
           </ToolTip>
-          
+
         ))}
       </ul>
     </ProgrammingList>

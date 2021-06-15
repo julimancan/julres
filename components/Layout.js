@@ -23,12 +23,14 @@ const LayoutWrapper = styled.div`
     color: ${colors.textColor};
     padding: 3rem 4ch 3rem;
     opacity: 1;
+    font-family: 'Play', sans-serif;
     * {
     /* border: 1px solid black; */
   }
     h1 {
       font-size: 1.5rem;
       white-space: nowrap;
+      font-family: 'Russo One', sans-serif;
     }
     ${mediaQueries.phablet_up`
       padding: 0 6ch 3rem;
