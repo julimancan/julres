@@ -41,6 +41,7 @@ const ProjectWrapper = styled.section`
           /* width: 100%; */
           /* max-width: 770px; */
           height: 100%;
+          filter: grayscale(1);
         }
     }
   }
