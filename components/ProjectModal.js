@@ -23,6 +23,7 @@ const ProjectModalContainer = styled.section`
     position: absolute;
     top: 2rem;
     left: 2rem;
+    font-size: 2rem;
   }
   .project-info {
     display: flex;
@@ -61,7 +62,7 @@ const ProjectModalContainer = styled.section`
       }
     }
   }
-  ${mediaQueries.desktop_up`
+  ${mediaQueries.desktop_medium_up`
     .project-info {
 
       flex-direction: row;

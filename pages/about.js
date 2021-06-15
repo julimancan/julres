@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { profile } from "../content/content";
 import { colors } from "../siteColors";
 
+import mediaQueries from "../utils/mediaQueries.ts";
 
 
 const AboutPage = styled(motion.main)`
   /* padding-top: 10rem; */
+  /* margin-top: 5rem; */
 
   /* border: 1px solid black; */
   * {
@@ -14,13 +16,15 @@ const AboutPage = styled(motion.main)`
   /* border: 1px solid black; */
   }
   .cat-container {
-    background: red;
     display: flex;
     justify-content: center;
-    margin: 10rem 0 0rem;
-    width: 100%;
+    margin: 2rem 0 0rem;
+    /* width: 100%; */
+    max-height: 200px;
+    /* background: red; */
     .cat {
-      width: 100%;
+      /* width: 100%; */
+      max-width: 250px;
 
       }
     }
@@ -31,18 +35,24 @@ const AboutPage = styled(motion.main)`
       display: grid;
       /* align-items: center; */
       position: relative;
+      margin: 0 5rem;
+      p {
+        
+        margin: 1rem 5rem;
+      }
+      
+  }
     .image-container {
       /* background: red; */
       display: flex;
       justify-content: center;
-      margin: 0 0 1rem;
+      margin: 1rem;
       width: 100%;
-      .cat {
-        width: 100%;
-
-      }
+      min-width: 150px;
+      position: relative;
     }
     .profile {
+      /* margin-top: 5rem; */
       width: 10rem;
       overflow: hidden;
       height: 10rem;
@@ -54,7 +64,12 @@ const AboutPage = styled(motion.main)`
       /* transform: translate(-50%, 0%); */
       margin: 1rem auto;
     }
-  }
+    ${mediaQueries.desktop_medium_up`
+        article {
+          display: flex;
+        }
+       
+      `}
 `;
 
 
@@ -62,21 +77,25 @@ const About = () => {
   console.log(`here~!!!`)
   return (
     <AboutPage>
-      <div className="cat-container">
-        <img src="/catCoding.webp" alt="cat coding" className="cat" />
-      </div>
       <h1>Profile</h1>
+
+
       <article>
-        {profile.map((paragraph, index) => (
-          <div key={index}>
-            <p>{paragraph}</p>
-            <br />
-          </div>
-        ))}
         <div className="image-container profile">
           <img src="/juli.jpg" alt="juli's face" />
         </div>
+        <div >
+          {profile.map((paragraph, index) => (
+            <p key={index}>{paragraph} <br /></p>
+
+          ))}
+        </div>
+
       </article>
+        <div className="cat-container">
+
+          <img src="/catCoding.webp" alt="cat coding" className="cat" />
+        </div>
     </AboutPage>
   )
 };

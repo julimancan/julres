@@ -131,7 +131,7 @@ export const projects = [
     name: "It’s My Wine",
     dates: " Sep.2020 (currently in progress)",
     description: [
-      "Leading a team of 3 developers in the building and implementation of an e-commerce site with a label customizer aimed at creating logic and solutions in line with our client&#x27;s goals, vision, and ethics.",
+      "Leading a team of 3 developers in the building and implementation of an e-commerce site with a label customizer aimed at creating logic and solutions in line with our client's goals, vision, and ethics.",
       "Designing the wireframe, peer programming the front-end of a Full Stack Application (built using React, Konva, Stripe, and emailjs), developing over 10 new features and implementing automatic emails."
     ],
     stack: [
@@ -148,7 +148,7 @@ export const projects = [
     name: "IoT MasterClass",
     dates: "April 2021 – (currently in progress)",
     description: [
-      "Building a Full Stack Application platform to connect custom IoT devices to customer&#x27;s devices where they choose from a list of premade templates that display and manage the information.",
+      "Building a Full Stack Application platform to connect custom IoT devices to customer's devices where they choose from a list of premade templates that display and manage the information.",
       "Developing the app with Vue, Nuxt, Express for the backend, and MongoDB as a database."
     ],
     stack: [
@@ -158,7 +158,7 @@ export const projects = [
     githubLinks: [
       "https://github.com/julimancan/iot-masterclass-fe",
     ],
-    imageLink: ""
+    imageLink: "/projectScreenshots/iotMaster.png"
   },
   {
     name: "ReForest",
@@ -178,24 +178,24 @@ export const projects = [
     ],
     imageLink: "https://github.com/lib3rate/which-bin-app/raw/master/public/images/ReadME/Euni.gif"
   },
-  {
-    name: "ReForest",
-    dates: "Aug. 2020 to Aug. 2020",
-    description: [
-      "Worked with 3 developers as part of our graduation project for Lighthouse Labs Web Development bootcamp, to build an ecologically friendly web app for waste management.",
-      "The app uses AWS Rekognition service to identify waste with photographs. The project was built using React, Auth0 &amp; PostgreSQL on the backend.",
-      "Engineered and developed the front-end features, design, and implementation of the database, which includes a gamified version to engage users by providing a space to compare their progress to their circle of friends.",
-    ],
-    stack: [
-      "React", "Bulma", "Konva", "SASS", "Express", "Stripe", "PostgreSQL", "Auth0", "Styled-Components",
-    ],
-    liveLink: "",
-    githubLinks: [
-      "https://github.com/lib3rate/which-bin-app",
-      "https://github.com/lib3rate/which-bin-api",
-    ],
-    imageLink: "https://github.com/lib3rate/which-bin-app/raw/master/public/images/ReadME/Euni.gif"
-  },
+  // {
+  //   name: "ReForest",
+  //   dates: "Aug. 2020 to Aug. 2020",
+  //   description: [
+  //     "Worked with 3 developers as part of our graduation project for Lighthouse Labs Web Development bootcamp, to build an ecologically friendly web app for waste management.",
+  //     "The app uses AWS Rekognition service to identify waste with photographs. The project was built using React, Auth0 &amp; PostgreSQL on the backend.",
+  //     "Engineered and developed the front-end features, design, and implementation of the database, which includes a gamified version to engage users by providing a space to compare their progress to their circle of friends.",
+  //   ],
+  //   stack: [
+  //     "React", "Bulma", "Konva", "SASS", "Express", "Stripe", "PostgreSQL", "Auth0", "Styled-Components",
+  //   ],
+  //   liveLink: "",
+  //   githubLinks: [
+  //     "https://github.com/lib3rate/which-bin-app",
+  //     "https://github.com/lib3rate/which-bin-api",
+  //   ],
+  //   imageLink: "https://github.com/lib3rate/which-bin-app/raw/master/public/images/ReadME/Euni.gif"
+  // },
 ];
 
 export const education = [

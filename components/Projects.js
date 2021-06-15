@@ -35,21 +35,23 @@ const ProjectWrapper = styled.section`
         color: ${colors.projectCardTitle};
         margin-bottom: .25rem;
       }
-      div{
-        /* width: 300px; */
-        /* height: 225px; */
-        /* background: red; */
+
         img {
           /* object-fit: cover; */
           /* width: 100%; */
           /* max-width: 770px; */
+          height: 100%;
         }
-      }
     }
   }
   ${mediaQueries.desktop_up`
     ul {
-      grid-template-columns: repeat(2, 1fr)
+      grid-template-columns: repeat(2, 1fr);
+      li {
+        img {
+          height: 20vw;
+        }
+      }
     }
   `}
 `;
@@ -80,25 +82,25 @@ const Projects = ({ openModal }) => {
             //   }}
             content="click for more info"
             direction="top"
-            
-         >
+
+          >
             <li onClick={() => openModal(project)}>
               <h3>
                 {project.name}
               </h3>
 
-                <img 
-                  src={project.imageLink} 
-                  alt={project.name} 
-                  // height={200} 
-                  width={"100%"} 
-                    // layout={"fill"}
-                  />
+              <img
+                src={project.imageLink}
+                alt={project.name}
+                // height={200} 
+                width={"100%"}
+              // layout={"fill"}
+              />
             </li>
           </ToolTip>
         ))}
       </ul>
-   
+
     </ProjectWrapper>
   )
 };
