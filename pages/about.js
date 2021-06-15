@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { profile } from "../content/content";
-import { colors } from "../siteColors";
 
 import mediaQueries from "../utils/mediaQueries.ts";
 
@@ -35,11 +34,7 @@ const AboutPage = styled(motion.main)`
       display: grid;
       /* align-items: center; */
       position: relative;
-      margin: 0 5rem;
-      p {
-        
-        margin: 1rem 5rem;
-      }
+
       
   }
     .image-container {
@@ -67,14 +62,15 @@ const AboutPage = styled(motion.main)`
     ${mediaQueries.desktop_medium_up`
         article {
           display: flex;
+          p {
+            margin: 1rem 5rem;
+           }
         }
-       
       `}
 `;
 
 
 const About = () => {
-  console.log(`here~!!!`)
   return (
     <AboutPage>
       <h1>Profile</h1>
@@ -92,10 +88,10 @@ const About = () => {
         </div>
 
       </article>
-        <div className="cat-container">
+      <div className="cat-container">
 
-          <img src="/catCoding.webp" alt="cat coding" className="cat" />
-        </div>
+        <img src="/catCoding.webp" alt="cat coding" className="cat" />
+      </div>
     </AboutPage>
   )
 };
