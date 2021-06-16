@@ -12,84 +12,116 @@ export const profile = [
   "Whenever I'm not coding, I'm either cuddling my foster dog, out creating content with my musician partner or playing soccer (currently out due to a minor injury!)."
 ];
 
+
+
+export const technologies = [
+  {
+    name: "Front End",
+    list: [
+      {
+        name: "Vue",
+        icon: <FaVuejs />,
+        // icon: <AiFillGithub/>,
+      },
+
+      {
+        name: "Nuxt",
+        icon: <SiNuxtDotJs />,
+      },
+      {
+        name: "Next",
+        icon: <BsTriangleFill />,
+      },
+
+      {
+        name: "Sass",
+        icon: <SiSass />,
+      },
+      {
+        name: "React",
+        icon: <SiReact />,
+      },
+      {
+        name: "Bootstrap",
+        icon: <SiBootstrap />,
+      },
+      {
+        name: "Antd",
+        icon: <AiFillBug />,
+      },
+      {
+        name: "Material UI",
+        icon: <SiMaterialUi />,
+      },
+      {
+        name: "Styled Components",
+        icon: <SiStyledComponents />,
+      },
+      {
+        name: "Emotion",
+        icon: <GiLipstick />,
+      },
+
+      {
+        name: "Figma",
+        icon: <SiFigma />,
+      },
+    ],
+  },
+  {
+    name: "Back End",
+    list: [
+      {
+        name: "Express",
+        icon: <SiExpertsexchange />,
+      },
+      {
+        name: "Nodejs",
+        icon: <FaNodeJs />,
+      },
+      {
+        name: "Auth0",
+        icon: <SiAuth0 />,
+      },
+      {
+        name: "Postman",
+        icon: <SiPostman />,
+      },
+      {
+        name: "SQL",
+        icon: <AiOutlineConsoleSql />,
+      },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+      },
+    ],
+  },
+  {
+    name: "Version Control",
+    list: [
+      {
+        name: "GitHub",
+        icon: <AiFillGithub />,
+      },
+    ],
+  },
+]
 export const hardSkills = [
-  {
-    name: "Git",
-    icon: <AiFillGithub />,
-  },
-  {
-    name: "Vue",
-    icon: <FaVuejs />,
-    // icon: <AiFillGithub/>,
-  },
-  {
-    name: "Nuxt",
-    icon: <SiNuxtDotJs />,
-  },
-  {
-    name: "Next",
-    icon: <BsTriangleFill />,
-  },
-  {
-    name: "Express",
-    icon: <SiExpertsexchange />,
-  },
-  {
-    name: "Sass",
-    icon: <SiSass />,
-  },
-  {
-    name: "React",
-    icon: <SiReact />,
-  },
-  {
-    name: "Bootstrap",
-    icon: <SiBootstrap />,
-  },
-  {
-    name: "WordPress",
-    icon: <SiWordpress />,
-  },
-  {
-    name: "Nodejs",
-    icon: <FaNodeJs />,
-  },
-  {
-    name: "Microsoft Office",
-    icon: <SiMicrosoftoffice />,
-  },
-  {
-    name: "Auth0",
-    icon: <SiAuth0 />,
-  },
-  {
-    name: "Antd",
-    icon: <AiFillBug />,
-  },
-  {
-    name: "Material UI",
-    icon: <SiMaterialUi />,
-  },
-  {
-    name: "Styled Components",
-    icon: <SiStyledComponents />,
-  },
-  {
-    name: "Emotion",
-    icon: <GiLipstick />,
-  },
-  {
-    name: "Postman",
-    icon: <SiPostman />,
-  },
-  {
-    name: "MongoDB",
-    icon: <SiMongodb />,
-  },
-  {
-    name: "Figma",
-    icon: <SiFigma />,
-  },
+
+
+
+
+  // {
+  //   name: "WordPress",
+  //   icon: <SiWordpress />,
+  // },
+
+  // {
+  //   name: "Microsoft Office",
+  //   icon: <SiMicrosoftoffice />,
+  // },
+
 ];
 
 export const programmingLanguages = [

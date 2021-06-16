@@ -98,7 +98,7 @@ const ToolTip = (props) => {
   const showTip = () => {
     timeout = setTimeout(() => {
       setActive(true);
-    }, props.delay || 400);
+    }, props.delay || 100);
   };
 
   const hideTip = () => {

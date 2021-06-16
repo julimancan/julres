@@ -61,7 +61,7 @@ export default function Home() {
 
   const device = deviceUsed(width);
 
-  
+
   //scroll position:
   const { y } = useWindowScroll();
 
@@ -85,16 +85,16 @@ export default function Home() {
       ref={homepageRef}
     >
       <LandingPage
-        // initial="hidden"
-        // animate="visible"
+      // initial="hidden"
+      // animate="visible"
       >
 
         <motion.h2
-        initial="hidden"
-        animate="visible"
+          initial="hidden"
+          animate="visible"
 
           variants={variants}
-          
+
         >
           Hola! I'm Julian Bustos
         </motion.h2>
@@ -106,8 +106,8 @@ export default function Home() {
 
         >
           <span>
-          {/* scroll slowly */}
-          <BouncyArrow
+            {/* scroll slowly */}
+            <BouncyArrow
               transition={bounceTransition}
               animate={{
                 y: ["5%", "-25%"],
@@ -149,9 +149,9 @@ export default function Home() {
           animate={`${y > 150 && "visible"}`}
           variants={variants}
         >
-          <p>I have experience in a few programming languages:</p>
+          <p>I have experience in these programming languages:</p>
         </motion.div>
-      {/* {y} */}
+        {/* {y} */}
       </LandingPage>
 
 
@@ -162,30 +162,40 @@ export default function Home() {
         variants={variants}
         id="projects"
       >
-           <ProgrammingLanguages/>
+        <ProgrammingLanguages />
       </motion.article>
-      {/* <HardSkills device={device}/> */}
-            
+
+
       <motion.article
         initial="hidden"
         animate={`${y > 250 && "visible"}`}
         // animate={`${device === "desktop" ? y > 400 && "visible" : device === "tablet" ? y > 630 && "visible" : y > 200 && "visible" }`}
         variants={variants}
       >
-            <motion.div
+        <motion.div
           initial="hidden"
           animate={`${"visible"}`}
           variants={variants}
         >
-          <p>And here you can checkout some of my favourite projects:</p>
+          <p>here you can checkout some of my favourite projects:</p>
         </motion.div>
-           <Projects device={device} openModal={openModal}/>
+        <Projects device={device} openModal={openModal} />
 
       </motion.article>
-        
-        {modalOpen && (
-          <ProjectModal setModalOpen={closeModal} modalInfo={modalInfo}/>
-        )}
+      <motion.article
+        initial="hidden"
+        animate={`${y > 1100 && "visible"}`}
+        // animate="visible"
+        variants={variants}
+        id="projects"
+      >
+        To build these projects I used the following technologies:
+        {/* {y} */}
+        <HardSkills device={device} />
+      </motion.article>
+      {modalOpen && (
+        <ProjectModal setModalOpen={closeModal} modalInfo={modalInfo} />
+      )}
     </HomePage>
   )
 }

@@ -30,7 +30,7 @@ const ProgrammingList = styled.div`
           font-size: 1.5rem;
           width: 100%;
           .prog-name {
-          white-space: nowrap;
+            white-space: nowrap;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -49,7 +49,6 @@ const ProgrammingList = styled.div`
       .prog-lang {
         font-size: 3rem;
         .prog-lang-mov {
-          /* display: inline-block; */
         }
       }
     }
@@ -81,7 +80,7 @@ const ProgrammingLanguages = () => {
             content={language.name}
             key={index}
           >
-            <motion.div className="prog-lang"
+            <motion.li className="prog-lang"
               variants={programmingContVariants}
               initial="hidden"
               animate="show"
@@ -97,7 +96,7 @@ const ProgrammingLanguages = () => {
                 </div>
                 {language.icon}
               </motion.div>
-            </motion.div>
+            </motion.li>
           </ToolTip>
 
         ))}
