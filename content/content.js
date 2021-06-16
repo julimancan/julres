@@ -9,7 +9,7 @@ export const profile = [
   "Web Developer with 5+ years of experience in entrepreneurship, consulting, and media production in Toronto with a knack for creating new solutions in a short period of time.",
   "Fun, energetic, fast learner who knows that honesty, team, and hard work are the most important elements for any project. Passionate about technology, the internet, languages and acquiring new knowledge and skills.",
   "Currently leading a small team of developers to build a full-stack e-commerce site with a user-designed label on React and taking an IoT Masterclass that includes a Full-Stack application and the connection to IoT devices. Also actively learning Blitz.js, Next.js, Nuxt.js, Vue.js, Docker, and much more!",
-  "Whenever I'm not coding, I'm either cuddling my foster dog, out creating content with my musician partner or playing soccer (currently out due to a minor injury!)."
+  "Whenever I'm not coding, I'm either cuddling my foster dog, out creating content with my musician partner or playing soccer."
 ];
 
 
