@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
-import { hardSkills, technologies } from "../content/content";
-import { DesktopList } from "./components";
-import ToolTip from "./ToolTip";
+import { technologies } from "../content/content";
 import mediaQueries from "../utils/mediaQueries.ts";
 
 

@@ -1,5 +1,4 @@
 import { programmingLanguages } from "../content/content";
-import { DesktopList } from "./components";
 import ToolTip from "./ToolTip";
 import styled from "@emotion/styled";
 import mediaQueries from "../utils/mediaQueries.ts";

@@ -1,6 +1,5 @@
 import styled from "@emotion/styled"
 import Link from 'next/link'
-import { AiFillGithub } from "react-icons/ai";
 import { colors } from "../siteColors";
 import mediaQueries from "../utils/mediaQueries.ts";
 import menuItems from "./menuItems";

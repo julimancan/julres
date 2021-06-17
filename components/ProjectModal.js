@@ -83,7 +83,7 @@ const ProjectModalContainer = styled.section`
 `
 
 const ProjectModal = ({ setModalOpen, modalInfo }) => {
-  console.log(`modalInfo`, modalInfo)
+  // console.log(`modalInfo`, modalInfo)
   return (
     <ProjectModalContainer>
       <AiOutlineCloseSquare onClick={setModalOpen} />

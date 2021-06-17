@@ -1,6 +1,4 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
-import { bounceTransition } from "../animations";
 import { projects } from "../content/content";
 import { colors } from "../siteColors";
 import mediaQueries from "../utils/mediaQueries.ts";

@@ -1,6 +1,6 @@
 import { AiOutlineConsoleSql, AiFillBug, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaVuejs, FaNodeJs } from "react-icons/fa";
-import { SiRuby, SiJquery, SiJavascript, SiCss3, SiFigma, SiMongodb, SiPostman, SiStyledComponents, SiMaterialUi, SiAuth0, SiMicrosoftoffice, SiWordpress, SiNuxtDotJs, SiBootstrap, SiExpertsexchange, SiSass, SiReact } from "react-icons/si";
+import { SiJquery, SiJavascript, SiCss3, SiFigma, SiMongodb, SiPostman, SiStyledComponents, SiMaterialUi, SiAuth0, SiNuxtDotJs, SiBootstrap, SiExpertsexchange, SiSass, SiReact } from "react-icons/si";
 import { BsTriangleFill } from "react-icons/bs";
 import { GiLipstick } from "react-icons/gi";
 import { TiHtml5 } from "react-icons/ti"
