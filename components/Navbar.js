@@ -13,7 +13,8 @@ const NavbarWrapper = styled.nav`
   z-index: 100;
   bottom: 1rem;
   right: .5rem;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Play', sans-serif;  
+  font-size: 1.2rem;
   ul {
     list-style: none;
     li {

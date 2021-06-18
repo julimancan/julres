@@ -35,7 +35,7 @@ const Header = () => {
         <meta name="description" content="Julian Bustos Portfolio" />
         <link rel="icon" href="/juli.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Play&family=Russo+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Play&family=Russo+One&family=Lato&display=swap" rel="stylesheet" />
       </Head>
       {/* <DevLogo >{hash} </DevLogo> */}
       <BurgerMenu />

@@ -2,7 +2,7 @@ export const colors = {
   // background: "#31183C",
   background: "black",
   textColor: "white",
-  textHoverColor: "#eabffa",
+  textHoverColor: "#8800ba",
   // toolTipBackgroundColor: "#542966",
   toolTipBackgroundColor: "#4F4B4A",
   menuBackgroundColor: "#4E4E4E",
