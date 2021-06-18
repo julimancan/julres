@@ -32,8 +32,8 @@ const ProjectModalContainer = styled.section`
     align-items: center;
     img {
       width: 100%;
-      /* min-width: 300px;
-      max-width: 500px; */
+      /* min-width: 300px;*/
+      max-width: 800px; 
       margin: 1rem 0;
     }
     p {
