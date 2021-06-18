@@ -120,7 +120,7 @@ const BurgerMenu = () => {
         {menuItems.map((item, index) => (
           <NavigationItem key={index} open={navOpen} index={index}>
             {item.name === "Download My Resume" ? (
-              <a href={item.name} download><h3>{item.name}</h3></a>
+              <a href={item.url} download><h3>{item.name}</h3></a>
             ) : item.name === "social links" ? (
               <SocialLinks/>
             ) : (

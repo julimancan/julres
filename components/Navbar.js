@@ -42,7 +42,7 @@ const Navbar = () => {
       {menuItems.map((item, index) => (
           <li key={index} index={index}>
             {item.name === "Download My Resume" ? (
-              <a href={item.name} download><h4>{item.name}</h4></a>
+              <a href={item.url} download><h4>{item.name}</h4></a>
             ) : item.name === "social links" ? (
               <SocialLinks/>
             ) : (
