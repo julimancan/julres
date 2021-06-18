@@ -149,7 +149,7 @@ export default function Home() {
           animate={`${y > 150 && "visible"}`}
           variants={variants}
         >
-          <p>I have experience in these programming languages:</p>
+          <p>with experience in these programming languages:</p>
         </motion.div>
         {/* {y} */}
       </LandingPage>
@@ -157,7 +157,7 @@ export default function Home() {
 
       <motion.article
         initial="hidden"
-        animate={`${y > 200 && "visible"}`}
+        animate={`${y > 250 && "visible"}`}
         // animate="visible"
         variants={variants}
         id="projects"
@@ -168,7 +168,7 @@ export default function Home() {
 
       <motion.article
         initial="hidden"
-        animate={`${y > 250 && "visible"}`}
+        animate={`${y > 400 && "visible"}`}
         // animate={`${device === "desktop" ? y > 400 && "visible" : device === "tablet" ? y > 630 && "visible" : y > 200 && "visible" }`}
         variants={variants}
       >
@@ -177,7 +177,7 @@ export default function Home() {
           animate={`${"visible"}`}
           variants={variants}
         >
-          <p>here you can checkout some of my favourite projects:</p>
+          <p>these are some of my favourite projects:</p>
         </motion.div>
         <Projects device={device} openModal={openModal} />
 

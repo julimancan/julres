@@ -77,6 +77,7 @@ ${mediaQueries.desktop_up`
 
         .skill-name {
           /* background: red; */
+          
         }
 
           svg {

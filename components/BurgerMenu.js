@@ -4,6 +4,7 @@ import menuItems from './menuItems';
 import { colors } from '../siteColors'
 import { useState } from 'react';
 import SocialLinks from './SocialLinks';
+import AnimatedListItem from './AnimatedListItem';
 import mediaQueries from '../utils/mediaQueries.ts';
 
 const transitionDuration = ".4s";
@@ -86,13 +87,7 @@ const NavigationList = styled.ul`
   line-height: 3rem;  
 `;
 
-const NavigationItem = styled.li`
-  animation-name: animateIn;
-  animation-duration: 350ms;
-  animation-delay: calc(${({ index }) => index === 0 ? 1 : index + 1} * 400ms);  
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  font-family: 'Russo One', sans-serif;
+const NavigationItem = styled(AnimatedListItem)`
   h3, .download-res {
     color: ${colors.menuTextColor};
     text-transform: uppercase;
@@ -107,16 +102,6 @@ const NavigationItem = styled.li`
     text-decoration: none;
     color: white;
     font-size: 2rem;
-  }
-  @keyframes animateIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.6) translateY(-8px);
-  }
-  
-  100% {
-    opacity: 1;
-    }
   }
 `;
 

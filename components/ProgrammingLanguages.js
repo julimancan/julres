@@ -3,7 +3,7 @@ import ToolTip from "./ToolTip";
 import styled from "@emotion/styled";
 import mediaQueries from "../utils/mediaQueries.ts";
 import { progLangVariants, programmingContVariants } from "../animations";
-import { motion } from "framer-motion";
+import AnimatedListItem from "./AnimatedListItem";
 const ProgrammingList = styled.div`
   /* display: none; */
   /* background: red; */
@@ -79,12 +79,13 @@ const ProgrammingLanguages = () => {
             content={language.name}
             key={index}
           >
-            <motion.li className="prog-lang"
+            <AnimatedListItem className="prog-lang"
+            index={index}
               variants={programmingContVariants}
               initial="hidden"
               animate="show"
             >
-              <motion.div
+              <div
                 className="prog-lang-mov"
                 variants={progLangVariants}
                 initial="hidden"
@@ -94,8 +95,8 @@ const ProgrammingLanguages = () => {
                   {language.name}
                 </div>
                 {language.icon}
-              </motion.div>
-            </motion.li>
+              </div>
+            </AnimatedListItem>
           </ToolTip>
 
         ))}
