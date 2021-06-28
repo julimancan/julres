@@ -112,7 +112,7 @@ const HardSkills = () => {
                   <div className="skill">
 
                     {skill.icon}
-                    <div class="skill-name">
+                    <div className="skill-name">
                       {skill.name}
                     </div>
                   </div>

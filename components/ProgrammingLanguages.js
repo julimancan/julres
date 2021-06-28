@@ -91,7 +91,7 @@ const ProgrammingLanguages = () => {
                 initial="hidden"
                 animate="show"
               >
-                <div class="prog-name">
+                <div className="prog-name">
                   {language.name}
                 </div>
                 {language.icon}
