@@ -36,7 +36,8 @@ const Header = () => {
         <link rel="icon" href="/juli.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Play&family=Russo+One&display=swap" rel="stylesheet" />
-        <script async defer data-website-id="697d0581-be12-4f4d-aea1-8b00c9d329e9" src="https://julsumami.vercel.app/umami.js"></script>      </Head>
+        <script async defer data-website-id="ebbce72b-8b62-4eab-a8b1-9880bc58fb2a" src="https://juls-umami.vercel.app/umami.js"></script>
+      </Head>
       {/* <DevLogo >{hash} </DevLogo> */}
       <BurgerMenu />
       <Navbar />
