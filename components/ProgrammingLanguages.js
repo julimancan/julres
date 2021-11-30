@@ -69,10 +69,8 @@ const ProgrammingList = styled.div`
 `;
 
 const ProgrammingLanguages = () => {
-  // console.log(`programmingLanguages`, programmingLanguages)
   return (
     <ProgrammingList>
-      {/* <h2>Programming Languages</h2> */}
       <ul>
         {programmingLanguages.map((language, index) => (
           <ToolTip

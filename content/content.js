@@ -1,15 +1,15 @@
 import { AiOutlineConsoleSql, AiFillBug, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaVuejs, FaNodeJs } from "react-icons/fa";
-import { SiJquery, SiJavascript, SiCss3, SiFigma, SiMongodb, SiPostman, SiStyledComponents, SiMaterialUi, SiAuth0, SiNuxtDotJs, SiBootstrap, SiExpertsexchange, SiSass, SiReact } from "react-icons/si";
+import { SiJquery, SiJavascript, SiCss3, SiFigma, SiMongodb, SiPostman, SiRuby, SiStyledComponents, SiMaterialUi, SiAuth0, SiNuxtDotJs, SiBootstrap, SiExpertsexchange, SiSass, SiReact } from "react-icons/si";
 import { BsTriangleFill } from "react-icons/bs";
 import { GiLipstick } from "react-icons/gi";
 import { TiHtml5 } from "react-icons/ti"
 
 export const profile = [
-  "Web Developer with 5+ years of experience in entrepreneurship, consulting, and media production in Toronto with a knack for creating new solutions in a short period of time.",
-  "Fun, energetic, fast learner who knows that honesty, team, and hard work are the most important elements for any project. Passionate about technology, the internet, languages and acquiring new knowledge and skills.",
-  "Currently leading a small team of developers to build a full-stack e-commerce site with a user-designed label on React and taking an IoT Masterclass that includes a Full-Stack application and the connection to IoT devices. Also actively learning Blitz.js, Next.js, Nuxt.js, Vue.js, Docker, and much more!",
-  "Whenever I'm not coding, I'm either cuddling my foster dog, out creating content with my musician partner or playing soccer."
+  "Web Developer with 5+ years of experiencein entrepreneurship, consulting, and mediaproduction in Toronto with a knack forcreating new solutions in a short period oftime.",
+  "Fun, energetic, fast learner who knows thathonesty, team work, and hard work are themost important elements for any project.Passionate about technology, the internet,languages and acquiring new knowledge andskills.",
+  "Actively learning Blitz.js, Next.js, Nuxt.js, Vue.js,Docker, and much more!",
+  "Whenever I'm not coding, I'm either cuddlingfoster dogs (when available), out creatingcontent with my musician partner, or out in apark playing soccer."
 ];
 
 
@@ -145,11 +145,10 @@ export const programmingLanguages = [
     name: "SQL",
     icon: <AiOutlineConsoleSql />
   },
-  // {
-  //   name: "Ruby",
-  //   icon: <SiRuby />
-  // },
-
+  {
+    name: "Ruby on Rails",
+    icon: <SiRuby />
+  },
 ]
 
 export const languages = "Bilingual in English and Spanish. Intermediate French and limited working proficiency of German."
@@ -251,10 +250,22 @@ export const education = [
 
 export const experience = [
   {
+    company: "Revive Superfoods",
+    location: "Toronto",
+    position: ["Front-End Web Developer",],
+    dates: "Jul. 2021 to Current",
+    Achievements: [
+      "Work in an agile environment that focuses on quality and performance, establishing acontinuous delivery process.",
+      "Switching the current website from WordPress to a Ruby on Rails web application to increaseconversion and retention sales and better internal systems and communications within thecompany, improving the efficiency of our Distribution Centers.",
+      "Translate UX designs into code and commit code to Git.",
+      "Build responsive, performant, robust, reusable and maintainable UI components."
+    ],
+  },
+  {
     company: "El Junto",
     location: "Toronto",
     position: ["Manager", "Web Development", "Technology Research", "Technical Support", "Photographer", "Camera Operator", "and Business Consultation",],
-    dates: "Dec. 2016 to Current, Dec. 2016 to Current",
+    dates: "Dec. 2016 to Jun. 2021",
     Achievements: [
       "Designing and implementing websites for Carole&#x27;s Cheesecakes, The Empanada Dealer, Sorrisa group (2017 - 2019), Heavenfull (2017-2019), It&#x27;s My Wine, and Eunice Keitan (implementation of designer wireframe)",
       "Developing new business strategies to create new revenue streams, including bringing onboard new customers for Food and Wedding Photography, which resulted in the growth of the Photography Business by more than 60% in 2019.",
