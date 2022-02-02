@@ -1,31 +1,6 @@
-// import styled from '@emotion/styled';
 import Head from 'next/head'
 import BurgerMenu from './BurgerMenu';
 import Navbar from './Navbar';
-// import mediaQueries from "../utils/mediaQueries.ts";
-
-
-
-// const DevLogo = styled.p`
-//   font-family: sans-serif;
-//   font-size: 20rem;
-//   font-weight: 900;
-//   letter-spacing: 1rem;
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   color: lightgray;
-//   opacity: .1;
-//   -webkit-user-select: none; /* Safari */        
-//   -moz-user-select: none; /* Firefox */
-//   -ms-user-select: none; /* IE10+/Edge */
-//   user-select: none; /* Standard */
-//   z-index: 0;
-
-// `;
-// const hash = "</>";
-// console.log(`mediaQueries.phone`, mediaQueries.phone)
 
 const Header = () => {
   return (
@@ -38,7 +13,6 @@ const Header = () => {
         <link href="https://fonts.googleapis.com/css2?family=Play&family=Russo+One&display=swap" rel="stylesheet" />
         <script async defer data-website-id="a314cee8-3dd4-43ab-bdf8-3349f35dc42e" src="https://analytics-julimancan.vercel.app/umami.js"></script>
       </Head>
-      {/* <DevLogo >{hash} </DevLogo> */}
       <BurgerMenu />
       <Navbar />
     </div>
