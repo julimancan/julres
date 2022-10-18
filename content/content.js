@@ -27,10 +27,10 @@ import { GiLipstick } from "react-icons/gi";
 import { TiHtml5 } from "react-icons/ti";
 
 export const profile = [
-  "Web Developer with experience in entrepreneurship, consulting, and media productionin Toronto and a knack for creating new solutions in a short period of time.",
-  "Fun, energetic, fast learner who knows that honesty, team work, and hard work are themost important elements for any project. Passionate about technology, the internet,languages and acquiring new knowledge and skills.",
+  "Web Developer with experience in entrepreneurship, consulting, and media production in Toronto and a knack for creating new solutions in a short period of time.",
+  "Fun, energetic, fast learner who knows that honesty, team work, and hard work are the most important elements for any project. Passionate about technology, the internet,languages and acquiring new knowledge and skills.",
   "Actively learning Next.js, Nuxt.js, Vue.js, Docker, and much more!",
-  "Whenever I'm not coding, I'm either cuddling foster dogs (when available), out creatingcontent with my musician partner, or out in a park playing soccer.",
+  "Whenever I'm not coding, I'm either cuddling foster dogs (when available), out creating content with my musician partner, or out in a park playing soccer.",
 ];
 
 export const technologies = [
